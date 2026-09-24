@@ -1,0 +1,225 @@
+:root {
+  /* --dark-mode-element: hsl(209, 23%, 22%);
+  --dark-mode-background: hsl(207, 26%, 17%);
+  --dark-mode-text: hsl(0, 0%, 100%); */
+  --element: hsl(0, 0%, 100%);
+  --background: hsl(0, 0%, 98%);
+  --text: hsl(200, 15%, 8%);
+  --input: hsl(0, 0%, 52%);
+}
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito Sans', sans-serif;
+  color: var(--text);
+}
+header {
+  color: var(--text);
+  background: var(--element);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 4rem;
+  button {
+    color: var(--text);
+    background: none;
+    border: none;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    padding: 0;
+  }
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.0562443);
+}
+main {
+  background: var(--background);
+  padding: 0 4rem;
+  padding-top: 2rem;
+  min-height: 100vh;
+}
+.search-filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  #region-filter {
+    background: var(--element);
+    cursor: pointer;
+    color: var(--text);
+    border: none;
+    padding: 0.75rem 1rem;
+    padding-right: 1.7rem;
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.162443);
+    border-radius: 5px;
+    appearance: none;
+    option {
+      color: var(--text);
+    }
+  }
+  #region-filter:focus {
+    outline: none;
+  }
+  #region-filter option {
+    background: var(--element);
+    color: var(--text);
+  }
+  #search-input {
+    background: var(--element);
+    color: var(--text);
+    width: 35%;
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.162443);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    span {
+      color: var(--text);
+      margin: 0 1rem;
+    }
+    input {
+      border: none;
+      height: 100%;
+      padding: 0.75rem 1rem;
+      background: var(--element);
+      color: var(--text);
+    }
+    input:focus {
+      outline: none;
+    }
+    input::placeholder {
+      color: var(--text);
+    }
+  }
+}
+.wrapper {
+  position: relative;
+}
+#dropdownArr {
+  font-size: 0.8rem;
+  position: absolute;
+  right: 6%;
+  top: 33%;
+}
+.country-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+}
+.country-card {
+  background: var(--element);
+  width: 22%;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.162443);
+  transition: transform 0.3s ease-in-out;
+
+  .flag {
+    width: 100%;
+  }
+  .country-card-info {
+    padding: 1rem;
+    color: var(--text);
+    h3 {
+      margin: 0;
+      font-size: 1.2rem;
+    }
+    p {
+      margin: 0.5rem 0;
+      font-size: 0.9rem;
+    }
+  }
+  cursor: pointer;
+}
+.country-card:hover {
+  transform: scale(1.05);
+}
+.toTop {
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  position: fixed;
+  bottom: 1rem;
+  right: 0.4rem;
+  width: 3rem;
+  height:3rem;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  background-color: var(--element);
+}
+@media (max-width: 950px) {
+  .country-card {
+    width: 30%;
+  }
+}
+@media (max-width: 772px) {
+  .country-card {
+    width: 45%;
+  }
+}
+@media (max-width: 650px) {
+  main {
+    padding: 2 3rem;
+  }
+  header {
+    padding: 0.5rem 3rem;
+    h2 {
+      font-size: 1rem;
+    }
+    button {
+      font-size: 0.8rem;
+    }
+  }
+}
+@media (max-width: 500px) {
+  main {
+    padding: 2rem 2rem;
+  }
+  header {
+    padding: 0.5rem 2rem;
+  }
+  .search-filter {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    #search-input {
+      width: 100%;
+    }
+  }
+}
+@media (max-width: 450px) {
+  main {
+    padding: 2rem 1rem;
+  }
+  header {
+    padding: 0.5rem 1rem;
+    h2 {
+      font-size: 1rem;
+    }
+    button {
+      font-size: 0.8rem;
+    }
+  }
+}
+@media (max-width: 400px) {
+  .country-card-container {
+    justify-content: center;
+  }
+  .country-card {
+    width: 75%;
+  }
+}
+.dark-mode {
+  --element: hsl(209, 23%, 22%);
+  --background: hsl(207, 26%, 17%);
+  --text: hsl(0, 0%, 100%);
+}

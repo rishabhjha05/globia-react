@@ -1,0 +1,123 @@
+#back-button {
+  background: var(--element);
+  color: var(--text);
+  border: none;
+  padding: 1rem 2.5rem;
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.162443);
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 3rem 0;
+}
+main {
+  min-height: 100vh;
+  padding: 0rem 4rem;
+}
+.country-page {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  column-gap: 3rem;
+  .country-page-flag {
+    width: 40% !important;
+    border-radius: 5px;
+    max-height: min-content;
+    align-self: center;
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.162443);
+  }
+  .country-page-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    padding: 1rem 2rem;
+    color: var(--text);
+    h2 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+    p {
+      margin: 0.5rem 0;
+      font-size: 1rem;
+    }
+    .country-detail {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      .country-detail-left {
+        width: 50%;
+      }
+      .country-detail-right {
+        width: 50%;
+      }
+    }
+    .border-countries {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 1rem;
+      strong {
+        font-weight: 600;
+      }
+      .border-countries-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        .border-country {
+          background: var(--element);
+          color: var(--text);
+          border: none;
+          padding: 0.5rem 1rem;
+          box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.162443);
+          cursor: pointer;
+          border-radius: 5px;
+          transition: transform 0.3s ease-in-out;
+        }
+        .border-country:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1000px) {
+  .country-page {
+    gap: 0;
+
+    .country-page-info {
+      padding: 1rem 2rem;
+    }
+  }
+}
+@media (max-width: 870px) {
+  header {
+    padding: 0.5rem 2rem;
+  }
+  main {
+    padding: 0 2rem;
+  }
+}
+@media (max-width: 800px) {
+  #back-button {
+    margin: 1.5rem 0;
+  }
+  .country-page {
+    flex-direction: column;
+    gap: 2rem;
+    .country-page-flag {
+      width: 100% !important;
+    }
+    .country-page-info {
+      padding: 1rem 0;
+      .country-detail {
+        flex-direction: column;
+        gap: 1rem;
+        .country-detail-left,
+        .country-detail-right {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
