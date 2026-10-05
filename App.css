@@ -101,14 +101,20 @@ main {
   top: 33%;
 }
 .country-card-container {
-  display: flex;
-  flex-wrap: wrap;
+  /* display: flex;
+  flex-wrap: wrap; */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 .country-card {
+  place-self: center;
+  text-decoration: none;
   background: var(--element);
-  width: 22%;
+  width: 100%;
+  height: 100%;
+  max-width: 300px;
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -148,7 +154,7 @@ main {
   bottom: 1rem;
   right: 0.4rem;
   width: 3rem;
-  height:3rem;
+  height: 3rem;
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -218,7 +224,7 @@ main {
     width: 75%;
   }
 }
-.dark-mode {
+.dark {
   --element: hsl(209, 23%, 22%);
   --background: hsl(207, 26%, 17%);
   --text: hsl(0, 0%, 100%);

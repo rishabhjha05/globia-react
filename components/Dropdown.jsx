@@ -1,7 +1,7 @@
-const Dropdown = () => {
+const Dropdown = ({onchange}) => {
   return (
     <>
-      <select name="region" id="region-filter" defaultValue="Filter by Region">
+      <select name="region" id="region-filter" defaultValue="Filter by Region" onChange={onchange}>
         <option value="" hidden="">
           Filter by Region
         </option>
